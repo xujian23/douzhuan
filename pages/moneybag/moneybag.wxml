@@ -1,0 +1,41 @@
+<view class='itembox'>
+   <view class='pointText'>当前积分</view>
+   <view class='point'>{{pointBalance}}</view>
+</view>
+
+<view class='itembox'>
+   <view class='pointText'>可提现金额</view>
+   <view class='point'>{{amount}}</view>
+   <view class='tiqian'>
+      <form class='form formp' bindsubmit="jumpSubmit" report-submit='{{true}}'>
+          <button class='formbtn' formType="submit"></button>
+             <view class='payrecords'>提现记录</view>
+      </form>
+    </view>
+</view>
+
+<view class='text1'>—— 注意事项 ——</view>
+<view class='text2'>{{notice}}</view>
+
+<!--  提示用户授权 -->
+<view class='getAuto'>
+  <button wx:if="{{!canWithdraw}}" class='disabledBtn' type="default" plain="false" bindtap='tixianFail'> 立即提现 </button>
+  <form bindsubmit="primary" report-submit='{{true}}' wx:if="{{canWithdraw}}">
+    <view class='primary'>
+      立即提现
+      <button formType="submit" class='primarybtn' type="primary"> </button>
+    </view>
+  </form>
+  <button wx:if="{{isauthorization}}" class='getUserInfo' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+</view>
+
+<view class='popupBox' wx:if="{{popupBoxFade}}">
+    <view class='popup'>
+        <view class='pptitle'>积分不足，无法体现</view>
+        <view class='ppdestext'>当前积分不足，无法提现。邀请好友得积分，助力提现</view>
+        <view class='btnBox'>
+            <button class='ppbtn' bindtap='closepopup'>知道了</button>
+            <button class='ppbtn' style='color:green;' open-type='share'>去邀请</button>
+        </view> 
+    </view>
+</view>

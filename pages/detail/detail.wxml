@@ -1,0 +1,66 @@
+
+<view wx:if="{{boxNum==1?true:false}}">
+
+  <view class='Dtext'>简单的玩法，同时考验着每个人的知识面、逻辑能力、思维能力与反应能力。「谁是卧底发牌助手」，并非一个纯线上的小游戏，也就是说，在你与小伙伴面对面时，不再需要实物桌游牌，直接在手机上开启房间就可以玩啦。进入「谁是卧底发牌助手」，创建一个房间，如果你的小伙伴已经创建了，就直接点「加入房间」，输入房间号即可。</view>
+
+  <image class="Dimage" mode="widthFix" src="http://images.starknows.cn/jf1.png?imageslim"></image>
+  <view class='Dtext'>
+    创建房间后，可以拖动进度条选择参与人数，目前最大可选项是8人。而在词汇选择方面，猫妹认为，可以按照你当下好友局的类型来选择。比如大家经常一起开黑玩游戏，可以选择「游戏」的题型；而如果都是学生，还可以选择「学霸」局，复习娱乐两不误。
+  </view>
+  <image class="Dimage" mode="widthFix" src="http://images.starknows.cn/jf2.png?imageslim"></image>
+  <view class='Dtext'>
+   选择完词汇后，会出现一个房间号。将这个房间号告诉小伙伴们，大家就可以加入进来。也可以选择「邀请好友」，直接将小程序转发给好友点击加入。猫妹目前发现的应用场景，在于参与游戏的小伙伴本身就有一个共同的群，好友直接点击即可领取到身份牌，省去了输入房间号的步骤。等大家都进入房间，领取到身份牌后，游戏就可以开始啦！值得提醒的是，开房间的人会自动成为「法官」，法官是主持整个游戏的角色，不参与到卧底游戏里面哦！
+  </view>
+  <view class='Dname'>
+    小程序搜索<text>“谁是卧底”</text>快来一起玩！
+  </view>
+</view>
+
+<view wx:if="{{boxNum==2?true:false}}">
+    <view class='Dtext'>“天黑请闭眼！”</view>
+    <view class='Dtext'>玩狼人杀的小伙伴对这句话一定不陌生，然鹅，不一定每一个局都能凑到有桌游的地方，这时候，「玩吧」的「狼人杀发牌助手」就可以排上用场了。</view>
+    <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf3.png?imageslim'></image>
+    <view class='Dtext'>狼人杀的参与人数最高可以增加到18人，可选择的角色有：平民、狼人、女巫、预言家、猎人、丘比特、守卫、白痴、盗贼、长老、野孩子、野熊。</view>
+    <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf4.png?imageslim'></image>
+    <view class='Dtext'>有趣的是，当你先设定好游戏人数后，法官选择入局角色时，「狼人」与「平民」的身份是可以自动按照比例增减的。也就是说，除了神职牌之外，法官可以自由设定狼人与平民的数量。例如，点击「狼人」的头像2下，即可增加该角色牌数2张，而这时，「平民」的牌数会自动减少2张，而牌总数不变。这个「自动适配」的功能，猫妹点赞。</view>
+    <view class='Dname'>
+    小程序搜索<text>“狼人杀”</text>快来一起玩！
+  </view>
+</view>
+
+<view wx:if="{{boxNum==3?true:false}}">
+  <view class='Dtext'>在小程序还没有出现时，各种「你画我猜」类的App和H5游戏就已经风靡起来了。社交属性如此强大的小游戏，在微信生态里自然是相当吃香的。</view>
+  <view class='Dtext'>在「玩吧你画我猜」小程序里共有四个玩法：</view>
+  <view class='Dtext'>创建房间：开启房间，选择好题目后，直接转发到好友会话或好友群，即可邀请小伙伴实时参与游戏；   </view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf5.png?imageslim'></image>
+  <view class='Dtext'>画给好友猜：非实时参与，你可以先画好指定的题目，保存画作后发送给好友猜；</view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf6.png?imageslim'></image>
+  <view class='Dtext'>随便猜猜：找不到小伙伴一起玩的时候推荐使用。这里相当于「广场」，提供许多画作素材给你猜。猜不中的话，还可以选择「提示」，猜中后也可以直接跳到「下一题」继续玩。
+  </view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf7.png?imageslim'></image>
+  <view class='Dtext'>不仅如此，还可以直接分享给好友，毕竟你可能会遇到一些灵魂画手，单凭一己之力是无法猜出答案的。精选画作：集合了许多优质画作，实力画家与灵魂画手的区别立现。但这些画作并非只提供给你欣赏，点击进入，还是可以参与到猜画当中哦！</view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf8.png?imageslim'></image>
+   <view class='Dname'>
+    小程序搜索<text>“你画我猜”</text>快来一起玩！
+  </view>
+</view>
+
+
+<view wx:if="{{boxNum==4?true:false}}">
+  <view class='Dtext'>
+    有人说，对篮球的热爱，就像是对青春的留恋。在篮球场上，即便烈日炎炎，也总能看到那么一群人在那里挥洒汗水，享受篮球竞技带来的快感。又好像是只要回到这片篮球场，每个人都还是那个十几岁的少年，无所畏惧。
+  </view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf9.png?imageslim'></image>
+  <view class='Dtext'>在辉煌的城市灯火下，带感的运动篮球界面，一颗篮球在地上等待着有人将它捡起，投入篮筐。 </view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf10.png?imageslim'></image>
+  <view class='Dtext'>
+    偷偷告诉你一个得高分的小秘密，在主页面有一个得分双倍的按钮，点击后分享这个游戏给朋友，可以有 3 分钟的双倍得分时长。
+  </view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf11.png?imageslim'></image>
+  <view class='Dtext'>怎么玩呢？只要在屏幕上点击任何地方，球就会弹起来，篮球会随着篮筐的方向移动。在合适的时机点击屏幕，把篮球从篮筐里投进去。在游戏的上方会有倒计时，就是那个绿色的进度条，每投进一个球进度条就会重新开始计时。一定要在进度条消失之前把球投进框内，否则就 game over 啦。
+  </view>
+  <image class="Dimage" mode="widthFix" src='http://images.starknows.cn/jf12.png?imageslim'></image>
+   <view class='Dname'>
+    小程序搜索<text>“热血大灌篮”</text>快来一起玩！
+  </view>
+</view>

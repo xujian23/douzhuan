@@ -1,0 +1,371 @@
+.swiper{
+  width:690rpx;
+  height:345rpx;
+  background:#eee;
+  margin:30rpx auto;
+  border-radius:10rpx;
+  overflow:hidden;
+}
+.navigator{
+  width:100%;
+  height:100%;
+  display:block;
+  position: relative;
+}
+.bannerImage{
+  width:100%;
+  height:100%;
+  position:absolute;
+  border-radius:10rpx;
+
+}
+.jingxuantitle{
+  margin:20rpx 0;
+  font-size: 20rpx;
+  color: #CCCCCC;
+  text-align: center;
+}
+
+/* 列表  */
+.listBox{
+  padding-bottom: 150rpx;
+}
+.listItem{
+  width:640rpx;
+  min-height:90rpx;
+  margin:20rpx auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-radius:10rpx;
+  padding: 25rpx;
+  position:relative;
+  background: #FFFFFF;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.10);
+}
+.leftPart{
+  width:75%;
+  height: 100%;
+  display:inline-flex;
+  align-items:center;
+}
+.logoimage{
+  width:88rpx;
+  height:88rpx;
+  border-radius:10rpx;
+
+}
+.description{
+  display:inline-block;
+  width:calc(100% - 120rpx);
+  margin-left:20rpx;
+}
+.title{
+  font-size: 28rpx;
+  color: #303030;
+}
+.des{
+  font-size:20rpx;
+  line-height: 30rpx;
+  width: 100%;
+  height: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #979797;
+}
+.rightPart{
+  width:25%;
+  height: 100%;
+  display:inline-flex;
+  flex-direction:row-reverse;
+}
+.ktjstyle{
+  width: 100%;
+  height: 100%;
+}
+.nav{
+  width: 100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+
+.button{
+  text-align:center;
+  font-size:20rpx;
+  border-radius:10rpx;
+  line-height:44rpx;
+  width: 120rpx;
+  height: 44rpx;
+  color: #FFFFFF;
+  background: #2D8EFF;
+}
+.getUserInfo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  opacity: 0;
+  z-index: 10;
+}
+
+/* 插屏弹窗  */
+.popupBox{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:999;
+  background-color:rgba(0,0,0,0.6);
+  width:100%;
+  height:100%;
+}
+.guzeContent{
+  width: 552rpx;
+  padding: 0 0 44rpx 0;
+  margin: 200rpx auto 0 auto;
+  background:#ff7300;
+  border-radius: 20rpx;
+}
+.groupImage{
+  width:240rpx;
+  height:179rpx;
+  display: block;
+  margin: 60rpx auto 30rpx auto;
+}
+.popImage{
+  width:100%;
+  height:510rpx;
+  display:block;
+}
+.gztitle{
+  font-size: 28rpx;
+  color: #57270d;
+  text-align: center;
+  margin: 10rpx auto 20rpx auto;
+  border-radius:20rpx;
+  text-shadow: 1px 1px 1px #FF9A5B;
+}
+.gzcontent{
+  font-size: 22rpx;
+  color: #57270d;
+  width: calc(100% - 90rpx);
+  margin: 0 auto;
+  line-height:40rpx;
+  text-shadow: 1px 1px 1px #FF9A5B;
+}
+.gzcontent:last-child{
+  text-align: center;
+  margin: 30rpx auto 0 auto;
+}
+.closePop{
+  display:block;
+  width:540rpx;
+  height:88rpx;
+  border-radius:10rpx;
+  margin:30rpx auto 0 auto;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color: #303030;
+  text-align: center;
+  background: #fff;
+}
+.closetc{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.jwContent{
+  position: absolute;
+  z-index: 10;
+  width: 510rpx;
+  background: #FFFFFF;
+  box-shadow: 0 6rpx 12rpx 0 rgba(0,0,0,0.10);
+  border-radius: 10rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 400rpx;
+  min-height: 420rpx;
+}
+.jwIcon{
+  width: 140rpx;
+  height: 140rpx;
+  box-shadow: 0 8rpx 16rpx 0 rgba(0,0,0,0.20);
+  border-radius: 10rpx;
+  margin:-70rpx auto;
+  display:block;
+}
+.jwtitle{
+  margin-top:100rpx;
+  text-align:center;
+  font-weight:700;
+  font-size:36rpx;
+  color:#303030;
+}
+.jwcontent{
+  font-size:20rpx;
+  color:#979797;
+  margin:20rpx auto;
+  width:80%;
+  line-height:35rpx;
+  text-align:center;
+}
+.jumpwxother{
+  background:#000;
+  opacity:1;
+  color:#fff;
+  height:88rpx;
+  line-height:88rpx;
+  font-size:24rpx;
+  text-align:center;
+  position:absolute;
+  width:100%;
+  bottom:0;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+/* 体验少于弹窗 */
+.rotateBackImage{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+  width:650rpx;
+  height: 650rpx;
+  animation:rotate 3s linear infinite;
+}
+@keyframes rotate{
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
+}
+
+.popup2{
+  border-radius:10rpx;
+  background-color:#fff;
+  width:510rpx;
+  height: 510rpx;
+  background: #FFFFFF;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.10);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto auto;
+  z-index: 20;
+}
+.title2{
+  font-size:36rpx;
+  text-align:center;
+  color: #303030;
+}
+.description2{
+  font-size:20rpx;
+  line-height:50rpx;
+  margin-top:10rpx;
+  color: #979797;
+  text-align: center;
+}
+.confirm{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:88rpx;
+  line-height:88rpx;
+  font-size:24rpx;
+  text-align:center;
+  left:0;
+  background: #303030;
+  color: #FFFFFF;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+
+/* 第三个 弹窗  */
+.popup3{
+  border-radius:10rpx;
+  background-color:#fff;
+  width:400rpx;
+  height:600rpx;
+  margin:300rpx auto 0 auto;
+  position: relative;
+}
+.backimage3{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.title3{
+  position:absolute;
+  top:100rpx;
+  left:0;
+  width:100%;
+  z-index: 10;
+  text-align: center;
+}
+.confirm3{
+  position:absolute;
+  bottom:100rpx;
+  width:80%;
+  height:100rpx;
+  line-height:100rpx;
+  color:green;
+  font-size:36rpx;
+  text-align:center;
+  left:10%;
+  background: #eee;
+  z-index: 20;
+}
+.hongbaoBox{
+  width: 88rpx;
+  height: 88rpx;
+  position: fixed;
+  right: 20rpx;
+  top: 385rpx;
+  z-index: 50;
+}
+.hongbaoimage{
+  width: 100%;
+  height: 100%;
+}
+
+/*  form表单 */
+.form{
+  width:100%;
+  height:100%;
+  display:block;
+
+}
+.formbtn{
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  opacity:0;
+  z-index: 10;
+}
+
+.formp{
+  position: relative;
+}
+.bannerad{
+  background: #303030;
+  border-radius: 10rpx 0 0 0;
+  font-size: 20rpx;
+  color: #FFFFFF;
+  padding: 5rpx 10rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

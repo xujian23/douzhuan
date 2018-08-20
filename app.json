@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/mycenter/mycenter",
+    
+    "pages/index/index",
+    
+    "pages/invitingFriends/invitingFriends",
+    
+    
+    "pages/moneybag/moneybag",
+    
+    
+    
+    "pages/webview/webview",
+    
+    
+    
+    "pages/jumpminwx/jumpminwx",
+    
+    "pages/demo/demo",
+    
+    
+    
+    "pages/detail/detail",
+    "pages/tips/tips",
+    "pages/cashRecord/cashRecord",
+    "pages/complaint/complaint",
+    "pages/ewm/ewm"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "兜赚",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "体验",
+        "selectedIconPath":"/pages/images/icon_experience_active.png",
+        "iconPath":"/pages/images/icon_experience_normal.png"
+      },
+      {
+        "pagePath": "pages/mycenter/mycenter",
+        "text": "我的",
+        "selectedIconPath": "/pages/images/centercenter.png",
+        "iconPath": "/pages/images/icon_usercenter_normal.png"
+      }
+      
+    ],
+    "color": "#cccccc",
+    "selectedColor": "#303030"
+  }
+}

@@ -1,0 +1,25 @@
+/* pages/detail/detail.wxss */
+page{
+  background: #fff;
+}
+.Dimage{
+  width: 90%;
+  margin: 20rpx auto;
+  display: block;
+}
+.Dtext{
+  width:85%;
+  margin:0 auto;
+  font-size:28rpx;
+  line-height:45rpx;
+  color: #272727;
+  text-align: justify;
+}
+.Dname{
+  text-align:center;
+  margin:50rpx auto;
+}
+.Dname text{
+  color:green;
+  margin: 0 20rpx;
+}

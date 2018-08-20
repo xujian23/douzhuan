@@ -1,0 +1,82 @@
+<view class='centerInfoBox'>
+    <view class='leftPart'>
+        <view class='userImageBox'>
+            <image mode="aspectFit" class="userAvatarurl" src="{{userImage}}" />
+        </view>
+        <view class='description'>
+            <view class='title'>{{username}}</view>
+            <view class='des'>已成功邀请{{invitedFriends}}位好友 +{{invitedFriendPoints}}</view>
+        </view>
+    </view> 
+    <button class='getUserInfo' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo"></button>
+    <view class='rightPart'>
+      <form class='form formp' bindsubmit="jumpSubmit" report-submit='{{true}}'>
+          <button class='formbtn' formType="submit"></button>
+            邀请好友体验
+      </form>
+    </view>
+    
+</view>
+
+<view class='xxlist'>
+    <view class='itemDl'>
+        <form class='form formp formFlex' bindsubmit="jumpSubmit2" report-submit='{{true}}'>
+          <view class='itemDt'>
+            {{pointBalance}}
+            <view class='putForward'>
+                <text>可提现</text>
+                <image class='lefticon' src='../images/lefticon.png'></image>
+            </view>
+          </view>
+          <view class='itemDd'>体验分</view>
+          <button class='formbtn' formType="submit"></button>
+        </form>
+    </view>
+
+     <view class='itemDl'>
+        <view class='itemDt'>{{todayExpCount}}</view>
+        <view class='itemDd'>今日体验</view>
+    </view> 
+</view>
+
+ 
+
+<swiper class="swiper" indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="rgba(0,180,180,1)" autoplay="true" interval="3000" wx:if="{{myTabDisplaySwitch==1?true:false}}">
+  <block wx:for="{{myBanners}}">
+    <swiper-item>
+      <navigator wx:if="{{item.redirectType.code==1?true:false}}" class='navigator' url="/pages/ewm/ewm?path={{item.redirectUrl}}" hover-class="navigator-hover">
+        <image mode="aspectFill" class="bannerImage" src="{{item.logo}}"/>
+      </navigator>
+
+      <navigator wx:if="{{item.redirectType.code==2?true:false}}" class='navigator' url="/pages/webview/webview?weburl={{item.redirectUrl}}" hover-class="navigator-hover">
+        <image mode="aspectFill" class="bannerImage" src="{{item.logo}}"/>
+      </navigator>
+
+      <ktj-navigator wx:if="{{item.redirectType.code==0?true:false}}" class="the-css-class navigator" app-id="{{item.appId}}" path="{{item.redirectUrl}}" extra-data="{{item.redirectArgs}}" version="release" bindclick="onNavigatorClick">
+        <view class='ktjbannerImage'>
+          <image mode="aspectFill" class="bannerImage" src="{{item.logo}}"/>
+        </view>
+      </ktj-navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='jingxuantitle' wx:if="{{myTabDisplaySwitch==1?true:false}}">- 今日收益 -</view>
+
+
+<scroll-view class='scrollView' scroll-y bindscrolltolower="lower">
+  <view class='pullDownlist' wx:for="{{integralArr}}">
+      <view class='pd_itemDl'>
+          <view class='pd_itemDt'>{{item.category}}</view>
+          <view class='pd_itemDd'>{{item.date}}</view>
+      </view>  
+      <view class='pd_itemDl pd_itemDlR'>
+          <view class='pd_itemDt pd_score'>{{item.points}}</view>
+      </view>  
+  </view>
+  <view class='lookmore' bindtap='lookmore' wx:if="{{lookmoreFade}}">查看剩余{{surplusNum}}条数</view>
+</scroll-view>
+
+
+<navigator wx:if="{{complaintEntrySwitch==1?true:false}}" url="/pages/complaint/complaint" hover-class="navigator-hover" class='complaint'>
+    <image class='complaintIcon' src='../images/complaint.png'></image>
+</navigator>

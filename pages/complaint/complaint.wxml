@@ -1,0 +1,7 @@
+<view class='c_title'>请选择投诉原因</view>
+<view class='complaintlist' wx:for="{{complaintArr}}" bindtap='comSelceted' data-index='{{index}}'>
+    <text class='c_text'>{{item.c_text}}</text>
+    <image class='rightIcon' src='{{item.rightIcon}}'></image>
+</view>
+
+<button class='primary' type="primary" bindtap="primary"> 提交 </button>

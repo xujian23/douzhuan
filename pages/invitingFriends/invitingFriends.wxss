@@ -1,0 +1,193 @@
+/* banner  */ 
+.integralWall{
+  display: flex;
+  align-items: center;
+  width: 630rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #FFFFFF;
+  box-shadow: 0 6px 12rpx 0 rgba(0,0,0,0.10);
+  border-radius: 10rpx;
+  margin: 30rpx auto 30rpx auto;
+  font-size: 20rpx;
+  color: #000000;
+  padding: 0 30rpx;
+  justify-content: space-between;
+}
+.laba{
+  width: 30rpx;
+  height: 20rpx;
+}
+
+.swiper{
+  width:calc(100% - 50rpx);
+  height:88rpx;
+  margin-left:20rpx;
+}
+.walls{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.wallName{
+  color: #2D8EFF;
+  margin-right: 10rpx;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  width:80rpx;
+}
+.wallText{
+  width: calc(100% - 85rpx);
+  display: inline-block;
+}
+/* 返回首页+ 分享按钮 */
+.shareIndexBox{
+  width: 630rpx;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.backIndex{
+  display: inline-flex;
+  width: 300rpx;
+  height: 88rpx;
+  border-radius: 8rpx;
+  border:1rpx solid #303030; 
+  font-size: 28rpx;
+  line-height: 88rpx;
+  justify-content: center;
+}
+
+.shareBtn{
+  width: 300rpx;
+  height: 88rpx;
+  background: #303030;
+  border-radius: 8rpx;
+  color: #FFFFFF;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+}
+.shareBtn2{
+  width: 630rpx;
+  height: 88rpx;
+  background: #303030;
+  border-radius: 8rpx;
+  color: #FFFFFF;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+}
+.share_btn{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.shareBox{
+  background: #FFFFFF;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.10);
+  border-radius: 10px;
+  padding: 60rpx 30rpx 30rpx 30rpx;
+  width: 630rpx;
+  margin: 0 auto;
+}
+.title1{
+  font-size: 36rpx;
+  color: #303030;
+  text-align: center;
+  line-height: 48rpx;
+}
+.title2{
+  font-size: 20rpx;
+  color: #CCCCCC;
+  text-align: center;
+  line-height: 36rpx;
+}
+.s_shareImg{
+  width: 480rpx;
+  height: 251rpx;
+  margin: 0 auto;
+  display: block;
+}
+.title3{
+  font-size: 20rpx;
+  color: #CCCCCC;
+  text-align: center;
+  line-height: 36rpx;
+  margin: 30rpx auto;
+}
+.sharePoints{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.yihuoPoint{
+  font-size: 28rpx;
+  color: #CCCCCC;
+}
+.s_points{
+  font-size: 64rpx;
+  color: #303030;
+}
+.tiqian{
+  border: 2rpx solid #2D8EFF;
+  border-radius: 10rpx;
+  font-size: 20rpx;
+  color: #2D8EFF;
+  padding: 10rpx 20rpx;
+}
+.line{
+  border-bottom: 1rpx solid #ddd;
+  margin: 30rpx auto;
+}
+.title4{
+  margin: 60rpx auto 20rpx auto;
+}
+.userBox{
+  display: flex;
+  width: 690rpx;
+  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.userImage{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+
+/*  form表单 */
+.form{
+  width:100%;
+  height:100%;
+  display:block;
+
+}
+.formbtn{
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  opacity:0;
+}
+
+.formp{
+  position: relative;
+}

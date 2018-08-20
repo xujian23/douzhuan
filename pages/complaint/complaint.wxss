@@ -1,0 +1,33 @@
+/* pages/投诉页面/投诉页面.wxss */
+.complaintlist{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  width:calc(100% - 40rpx);
+  margin:0 auto;
+  padding:30rpx 0;
+  border-bottom:0.5px solid #ddd;
+}
+.c_text{
+
+}
+.rightIcon{
+  width:60rpx;
+  height:50rpx;
+  margin-right:20rpx;
+}
+.c_title{
+  width:calc(100% - 40rpx);
+  border-bottom:0.5px solid #ddd;
+  font-size: 26rpx;
+  padding:30rpx 0;
+  margin: 0 auto;
+  color: #999;
+}
+.primary{
+  width:90%;
+  margin:100rpx auto;
+  height:100rpx;
+  line-height:100rpx;
+  font-size:40rpx;
+}

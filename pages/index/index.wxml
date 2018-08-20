@@ -1,0 +1,191 @@
+<!--index.wxml  -->
+<view wx:if="{{lineversion}}">
+    <swiper class="swiper" indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="rgba(0,180,180,1)" autoplay="true" interval="3000" circular="true">
+      <block wx:for="{{bannersArr}}">
+        <swiper-item>
+          <view wx:if="{{item.redirectType.code==1?true:false}}" class='navigator' bindtap='jumpEwm' data-redirectUrl='{{item.redirectUrl}}' data-points="{{item.points}}" data-code="{{item.code}}" data-state="{{item.experienceState.code}}">
+            <image mode="aspectFill" class="bannerImage" src="{{item.logo}}"/>
+          </view>
+
+          <ktj-navigator wx:if="{{item.redirectType.code==0?true:false}}" class="the-css-class navigator" app-id="{{item.appId}}" path="{{item.redirectUrl}}" extra-data="{{item.redirectArgs}}" version="release" bindclick="onNavigatorClick" data-appid="{{item._appid}}"  data-points="{{item.points}}" data-code="{{item.code}}" data-state="{{item.experienceState.code}}">
+            <view class='ktjbannerImage'>
+              <image mode="aspectFill" class="bannerImage" src="{{item.logo}}"/>
+            </view>
+          </ktj-navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class='jingxuantitle' bindtap='openrule'>- 精选小程序 -</view>
+
+    <view class='listBox'>
+      <view class='listItem' wx:for="{{listItemArr}}">
+        <view class='nav' wx:if="{{item.redirectType.code==1?true:false}}" bindtap='jumpEwm' data-redirectUrl='{{item.redirectUrl}}' data-points="{{item.points}}" data-code="{{item.code}}" data-state="{{item.experienceState.code}}">
+              <view class='leftPart'>
+                <image class='logoimage' src='{{item.logo}}'></image>
+                <view class='description'>
+                  <view class='title'>{{item.name}}</view>
+                  <view class='des'>{{item.description}}</view>
+                  <view class='des'>{{item.totalExperience}}人体验过</view>
+                </view>
+              </view>
+              <view class='rightPart'>
+                  <view class='button'>
+                    {{item.experienceState.text}}
+                  </view>
+              </view>
+        </view>
+
+        <ktj-navigator wx:if="{{item.redirectType.code==0?true:false}}" class="the-css-class ktjstyle" app-id="{{item.appId}}" path="{{item.redirectUrl==''?'pages/index/index':item.redirectUrl}}" extra-data="{{item._extraData}}" version="release" bindclick="onNavigatorClick" data-points="{{item.points}}" data-code="{{item.code}}" data-state="{{item.experienceState.code}}">
+              <view class='nav'>
+                <view class='leftPart'>
+                    <image class='logoimage' src='{{item.logo}}'></image>
+                    <view class='description'>
+                      <view class='title'>{{item.name}}</view>
+                      <view class='des'>{{item.description}}</view>
+                      <view class='des'>{{item.totalExperience}}人体验过</view>
+                    </view>
+                  </view>
+                  <view class='rightPart'>
+                      <view class='button'>
+                        {{item.experienceState.text}}
+                      </view>
+                  </view>
+              </view>
+        </ktj-navigator>
+      </view>
+    </view>
+
+    <view class='hongbaoBox' wx:if="{{inviteFriendEntrySwitch==1?true:false}}">
+        <form class='form formp' bindsubmit="jumpSubmit" report-submit='{{true}}'>
+            <image class='hongbaoimage' src='../images/hongbao.gif'></image>
+            <button class='formbtn' formType="submit"></button>
+        </form>
+    </view>
+
+    <!-- 小于10秒弹出框  ../images/img_time.png -->
+    <!-- 领取弹出框 redBagFade -->
+    <!-- 网络或其他原因出错 failBoxFade  -->
+    <view class='popupBox' wx:if="{{popupBoxFade}}">
+      <view class='popup2'>
+        <image class='groupImage' mode='aspectFill' src='{{groupImage}}'></image>
+        <view class='title2'>{{title2}}</view>
+        <view class='description2'>{{experienceMsgText}}</view>
+        <view class='confirm' bindtap='confirm'>{{confirm}}</view>
+      </view>
+      <image wx:if="{{rotate==0?true:false}}" mode='scaleToFill' class='rotateBackImage' src='../images/guangmang.png'></image>
+    </view>
+</view>
+
+<!-- 插屏弹窗  -->
+<view class='popupBox' wx:if="{{popupFade}}">
+  <view class='guzeContent'>
+      <image mode='widthFix' class='popImage' src='http://images.starknows.cn/guizelogo1.png'></image>
+      <view class="gztitle">规则说明</view>
+      <view class="gzcontent" wx:for="{{rulecontent}}">{{item}}</view>
+  </view>
+  <view bindtap='closePop' class='closePop'>我知道了</view>
+</view>
+
+<!-- 插屏弹窗   -->
+<view class='popupBox' wx:if="{{jwpopupFade}}">
+  <view class='closetc' bindtap='closejwpopup'></view>
+  <view class='jwContent'>
+      <image mode='scaleToFill' class='jwIcon' src='{{jxIcon}}'></image>
+      <view class="jwtitle">{{jwtitle}}</view>
+      <view class="jwcontent">{{jwcontent}}</view>
+      <ktj-navigator class="the-css-class" app-id="{{jwappId}}" path="{{jwpage}}" extra-data="{{jwredirectArgs}}" version="release"  data-appid="{{jwappId}}"  data-points="{{points}}" data-code="{{code}}" data-state="{{state}}" bindclick="onNavigatorClick">
+        <view class='jumpwxother'>
+          前往体验
+        </view>
+      </ktj-navigator>
+  </view>
+</view>
+
+<view wx:if="{{!lineversion}}">
+    <swiper class="swiper" indicator-dots="true" indicator-color="rgba(255,255,255,1)" indicator-active-color="rgba(0,180,180,1)" autoplay="true" interval="3000" circular="true">
+    <block>
+      <swiper-item>
+        <navigator class='navigator' url="/pages/detail/detail?box=1" hover-class="navigator-hover">
+          <image mode="aspectFill" class="bannerImage" src="http://images.starknows.cn/cover1.jpg"/>
+        </navigator>
+      </swiper-item>
+      <swiper-item>
+        <navigator class='navigator' url="/pages/detail/detail?box=2" hover-class="navigator-hover">
+          <image mode="aspectFill" class="bannerImage" src="http://images.starknows.cn/cover2.jpg"/>
+        </navigator>
+      </swiper-item>
+    </block>
+  </swiper>
+    <view class='listItem'>
+      <navigator class='nav' url="/pages/detail/detail?box=1">
+            <view class='leftPart'>
+              <image class='logoimage' src='../images/cover1.png'></image>
+              <view class='description'>
+                <view class='title'>谁是卧底</view>
+                <view class='des'>考验你的知识面、逻辑能力、思维能力与反应能力</view>
+                <view class='des'>42891人体验过</view>
+              </view>
+            </view>
+            <view class='rightPart'>
+                <view class='button'>
+                  查看详情
+                </view>
+            </view>
+      </navigator>
+    </view>
+    
+     <view class='listItem'>
+      <navigator class='nav' url="/pages/detail/detail?box=2">
+            <view class='leftPart'>
+              <image class='logoimage' src='../images/cover2.png'></image>
+              <view class='description'>
+                <view class='title'>狼人杀</view>
+                <view class='des'>天黑请闭眼！</view>
+                <view class='des'>89920人体验过</view>
+              </view>
+            </view>
+            <view class='rightPart'>
+                <view class='button'>
+                  查看详情
+                </view>
+            </view>
+      </navigator>
+    </view>
+     <view class='listItem'>
+      <navigator class='nav' url="/pages/detail/detail?box=3">
+            <view class='leftPart'>
+              <image class='logoimage' src='../images/cover3.png'></image>
+              <view class='description'>
+                <view class='title'>你画我猜</view>
+                <view class='des'>你来画，我来猜！</view>
+                <view class='des'>23980人体验过</view>
+              </view>
+            </view>
+            <view class='rightPart'>
+                <view class='button'>
+                  查看详情
+                </view>
+            </view>
+      </navigator>
+    </view>
+    <view class='listItem'>
+      <navigator class='nav' url="/pages/detail/detail?box=4">
+            <view class='leftPart'>
+              <image class='logoimage' src='../images/cover4.jpeg'></image>
+              <view class='description'>
+                <view class='title'>热血大灌篮</view>
+                <view class='des'>回到这片篮球场</view>
+                <view class='des'>68249人体验过</view>
+              </view>
+            </view>
+            <view class='rightPart'>
+                <view class='button'>
+                  查看详情
+                </view>
+            </view>
+      </navigator>
+    </view>
+</view>
+
+

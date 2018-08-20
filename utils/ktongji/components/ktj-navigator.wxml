@@ -1,0 +1,5 @@
+<view class="ktj-navigator" bindtap='handleTap'>
+  <navigator target="miniProgram" open-type="navigate" app-id="{{appId}}" path="{{path}}" extra-data="{{ extraData }}" version="{{ version }}">
+    <slot />
+  </navigator>
+</view>

@@ -1,0 +1,17 @@
+
+<view class='recordsBox' wx:if="{{recordsBox}}">
+  <view class='shopList' wx:for="{{shoplist}}">
+      <view class='listDl listDl2'>
+        <view class='listDt'>{{item.exchangeType}}</view>
+        <view class='listDd'>{{item.amount}}</view>
+      </view>
+      <view class='listDl listDr' style='color:{{item.status=="失败"?"#CCCCCC":"#FFD300"}}'>
+        {{item.state}}
+      </view>
+  </view>
+  <view class='lookmore' bindtap='lookmore' wx:if="{{lookmoreFade}}">查看更多</view>
+</view>
+
+<view class='recordsBox' wx:if="{{!recordsBox}}">
+  <view class='lookmore'>暂无</view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ktj-navigator": "/utils/ktongji/components/ktj-navigator"
+  },
+  "navigationBarTitleText": "我的中心"
+}

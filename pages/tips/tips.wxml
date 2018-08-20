@@ -1,0 +1,5 @@
+<image class="yes" src="../images/yes.png"></image>
+<view class='tipsText1'>提交成功</view>
+<view class='tipsText2'>{{tipsText2}}</view>
+
+<button bindtap='backIndex' class='button' type='primary'>确定</button>

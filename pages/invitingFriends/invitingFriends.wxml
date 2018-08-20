@@ -1,0 +1,55 @@
+<view class='integralWall'>
+  <image class='laba' src='../images/icon_noticeScroll.png'></image>
+  <swiper vertical="{{true}}" class="swiper" autoplay="{{autoplay}}" interval="{{interval}}" bindchange='swiperchange' current='{{current}}' duration='{{duration}}'>
+    <block wx:for="{{notices}}">
+      <swiper-item>
+          <view class='walls'>
+            <text class='wallName'>{{item.name}}</text>
+            <text class='wallText'>通过自己的努力将所有积分成功提现{{item.amount}}，可喜可贺!</text>
+          </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='shareBox'>
+    <view class='title1'>成功邀请好友</view>
+    <view class='title1'>立获{{rewardPoints}}积分奖励</view>
+    <view class='title2'>邀请好友成功授权登录后，可获得积分奖励</view>
+    <image class='s_shareImg' src='../images/img_inviteFriends.png'></image>
+    <view class='title3'>—— 已有{{withdrawCount}}人提现积分 ——</view>
+    <view class='sharePoints'>
+        <text class='yihuoPoint'>可用积分</text>
+        <text class='s_points'>{{invitePoints}}</text>
+        <view class='tiqian'>
+          <form class='form formp' bindsubmit="jumpSubmit" report-submit='{{true}}'>
+              <button class='formbtn' formType="submit"></button>
+               立即提现
+          </form>
+        </view>
+    </view>
+    <view class='line'></view>
+    
+    <!-- 返回首页 + 分享按钮 -->
+    <view class='shareIndexBox' wx:if="{{msgLogeIn}}">
+      <view>
+          <button class='shareBtn' open-type="share">邀请好友</button>
+      </view>
+      <navigator class='backIndex' url="/pages/index/index" open-type="switchTab" hover-class="other-navigator-hover">返回首页</navigator>
+    </view>
+
+    <view class='shareIndexBox' wx:if="{{!msgLogeIn}}">
+        <view class='shareBtn2'>
+            邀请好友
+            <button class='share_btn' open-type="share"></button>
+        </view>
+    </view>
+    
+
+</view>
+
+<view class='title3 title4'>—— 已成功邀请的好友 ——</view>
+<view class='userBox'>
+  <image wx:for="{{friends}}" class='userImage' src='{{item.avatar}}'></image>
+</view>
+

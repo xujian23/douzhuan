@@ -1,0 +1,4 @@
+<!--pages/ewm/ewm.wxml-->
+<image mode='widthFix' class='ewmImage' src='{{ewmImage}}' bindtap='previewEwm'>
+
+</image>
